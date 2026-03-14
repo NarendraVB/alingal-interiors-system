@@ -1,9 +1,15 @@
-export default function Home() {
+import DashboardLayout from "@/components/ui/dashboard-layout"
+
+export default function DashboardPage() {
   return (
-    <main className="p-10">
-      <h1 className="text-3xl font-bold">
-        Alingal Interiors System
+    <DashboardLayout>
+
+      <h1 className="text-2xl font-bold mb-6">
+        Dashboard
       </h1>
-    </main>
+
+      <p>Welcome to Alingal Interiors management system.</p>
+
+    </DashboardLayout>
   )
 }
