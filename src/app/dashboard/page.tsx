@@ -19,9 +19,14 @@ export default function DashboardPage() {
         <StatsCard title="Revenue This Month" value="₹24L" />
       </div>
       <ProjectChart />
-    <div className="grid grid-cols-2 gap-4 mt-6">
-  <ProjectChart />
+    <div className="grid grid-cols-3 gap-6 mt-6">
+
+  <div className="col-span-2">
+    <ProjectChart />
+  </div>
+
   <RecentActivity />
+
 </div>
     </DashboardLayout>
   )

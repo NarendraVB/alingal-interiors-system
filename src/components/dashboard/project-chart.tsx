@@ -11,15 +11,15 @@ const data = [
 
 export default function ProjectChart() {
   return (
-    <div className="h-80 bg-white p-4 rounded-xl border">
+    <div className="bg-white p-6 rounded-xl border h-[350px]">
       <h2 className="font-semibold mb-4">Projects by Stage</h2>
 
-      <ResponsiveContainer width="100%" height="100%">
+      <ResponsiveContainer width="100%" height={280}>
         <BarChart data={data}>
-          <XAxis dataKey="name" />
-          <YAxis />
+          <XAxis dataKey="name" tickLine={false} axisLine={false} />
+            <YAxis tickLine={false} axisLine={false} />
           <Tooltip />
-          <Bar dataKey="projects" />
+          <Bar dataKey="projects" radius={[6,6,0,0]} />
         </BarChart>
       </ResponsiveContainer>
     </div>
