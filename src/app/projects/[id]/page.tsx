@@ -67,7 +67,17 @@ export default function ProjectPage() {
     onTaskCreated={fetchTasks}
   />
 
-  <TaskList tasks={tasks} />
+  <TaskList tasks={tasks}
+   onTaskUpdated={(id:string,status:string)=>{
+    setTasks((prev:any)=>
+    prev.map((task:any)=>
+    task.id===id
+    ?{...task,status}
+    :task
+)
+)
+   }}
+   />
 
 </div>
 
@@ -79,7 +89,7 @@ export default function ProjectPage() {
       </div>
 
       <div className="mt-8">
-        <TaskList tasks={tasks} />
+        
       </div>
 
     </DashboardLayout>
